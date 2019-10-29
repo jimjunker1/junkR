@@ -8,9 +8,9 @@ mutate_cond <- function(.data, condition, ..., envir = parent.frame()) {
   .data
 }
 
-C_to_overKT <- function(a){1/(8.61733*10^-5*a)}
-overkt_to_C <- function(a){1/(a*(8.61733*10^-5)) - 273.15}
-C_to_overkt_stand <- function(a,b){(1/(8.61733e-5*(b+273.15)) - (1/(8.61733e-5*(a+273.15))))}
+C_to_overkt <<- function(a){1/(8.61733*10^-5*(a+273.15))}#overkt function
+overkt_to_C <<- function(a){1/(a*(8.61733*10^-5)) - 273.15}
+C_to_overkt_stand15 <<- function(a){(1/(8.61733e-5*(15+273.15)) - (1/(8.61733e-5*(a+273.15))))}
 
 na.rm_mean <- function(...,na.rm=FALSE){mean(c(...),na.rm=na.rm)}
 
