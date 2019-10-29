@@ -32,4 +32,5 @@ get_legend<-function(myggplot){
   return(legend)
 }
 
-hello <- print('olleh')
+hello <- function(){print('olleh')}
+
