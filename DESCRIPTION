@@ -4,7 +4,8 @@ Title: Personal R functions of Jim Junker
 Version: 0.1.0
 Author: Jim Junker
 Maintainer: <james.junker1@gmail.com>
-Description: 
+Description: This package contains generic functions used frequently by myself. This package is updated as functions are added, updated, or removed.
 License: MIT License
 Encoding: UTF-8
 LazyData: true
+Depends: R (>= 2.10), purrr
