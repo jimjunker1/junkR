@@ -8,4 +8,4 @@ Description: This package contains generic functions used frequently by myself. 
 License: MIT License
 Encoding: UTF-8
 LazyData: true
-Depends: R (>= 2.10), dplyr, purrr
+Depends: R (>= 2.10), dplyr, purrr, grid, ggplot2
