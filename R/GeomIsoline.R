@@ -1,5 +1,6 @@
-#geom_isolineNP
-## This geom adds NP stoichiometric isolines to plot background for NP pools
+#' geom_isolineNP
+#' This geom adds NP stoichiometric isolines to plot background for NP pools
+#'
 library(ggplot2)
 GeomIsolineNP = ggproto("GeomIsoline", Geom,
                        required_aes = c("x","y"),
@@ -18,9 +19,6 @@ GeomIsolineNP = ggproto("GeomIsoline", Geom,
                            pch = coords$shape
                          )
                        })
-
-#' @include stat-.r
-NULL
 
 #' Stoichiometric isolines: diagonal
 #'

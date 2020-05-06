@@ -38,3 +38,7 @@ makeNamedList <- function(...) {
   structure(list(...), names = as.list(substitute(list(...)))[-1L])
 }
 
+theme_mod <- theme_bw() %+replace% theme(panel.grid = element_blank())
+theme_black <- function() {theme_bw() %+replace% theme(panel.background = element_rect(fill = 'transparent', colour = NA),panel.grid = element_blank(), axis.ticks = element_line(color = 'white'),
+                                                        axis.title = element_text(color = 'white'), axis.text = element_text(color = 'white'), plot.background =element_rect(fill = 'transparent', colour = NA),
+                                                        panel.border = element_rect(fill = NA, colour = 'white'))}
