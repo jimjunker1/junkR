@@ -6,9 +6,11 @@
 #' author list
 #' @param y personList created from convert_complete_author(). Same length as x
 #' @example mapply(author_exchange, x = jrj.bib, y = full_authors_list)
+#' @import RelistBibEntry from RefManageR package
 #' @export
 author_exchange <- function(x,y){
+  requireNamespace('RefManageR', quietly = TRUE)
   x_flat <- unlist(x)
   x_flat$author <- y
-  return(RelistBibEntry(x_flat))
+  return(RefManageR::RelistBibEntry(x_flat))
 }
