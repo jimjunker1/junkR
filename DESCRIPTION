@@ -3,7 +3,7 @@ Type: Package
 Title: Personal R functions of Jim Junker
 Version: 0.1.0
 Author: Jim Junker
-Maintainer: <james.junker1@gmail.com>
+Maintainer: Jim Junker <james.junker1@gmail.com>
 Description: This package contains generic functions used frequently by myself. This package is updated as functions are added, updated, or removed.
 License: MIT License
 Encoding: UTF-8
@@ -14,12 +14,22 @@ Depends:
     purrr,
     grid,
     ggplot2
-RoxygenNote: 7.1.0
+Imports:
+    httr,
+    rvest,
+    xml2,
+    methods,
+    RefManageR
+RoxygenNote: 7.1.1
 Collate: 
-    'stat-.r'
+    'stat-.R'
     'GeomIsoline.R'
     'named_group_split.R'
     'standalone.R'
+    'author_exchange.R'
+    'convert_complete_author.R'
+    'get_complete_coauthors.R'
+    'rowr.R'
 Suggests: 
     scholar,
     RefManageR
