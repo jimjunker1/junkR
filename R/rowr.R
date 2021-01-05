@@ -52,7 +52,7 @@ vectorize<-function(fun,type=NULL)
 {
   function(...)
   {
-    cols<-cbind.fill(...)
+    cols<-cbind_fill(...)
     if(is.null(type))
       if(dim(cols)[2]<2)
         type=2
@@ -113,12 +113,12 @@ buffer<-function(x,length.out=len(x),fill=NULL,preserveClass=TRUE)
 #' @param fill R object to fill empty rows in columns below the max size.  If unspecified, repeats input rows in the same way as \code{cbind}. Passed to \code{\link{buffer}}.
 #' @export
 #' @examples
-#' cbind.fill(c(1,2,3),list(1,2,3),cbind(c(1,2,3)))
-#' cbind.fill(rbind(1:2),rbind(3:4))
+#' cbind_fill(c(1,2,3),list(1,2,3),cbind(c(1,2,3)))
+#' cbind_fill(rbind(1:2),rbind(3:4))
 #'df<-data.frame(a=c(1,2,3),b=c(1,2,3))
-#' cbind.fill(c(1,2,3),list(1,2,3),cbind(c('a','b')),'a',df)
-#' cbind.fill(a=c(1,2,3),list(1,2,3),cbind(c('a','b')),'a',df,fill=NA)
-cbind.fill<-function(...,fill=NULL)
+#' cbind_fill(c(1,2,3),list(1,2,3),cbind(c('a','b')),'a',df)
+#' cbind_fill(a=c(1,2,3),list(1,2,3),cbind(c('a','b')),'a',df,fill=NA)
+cbind_fill<-function(...,fill=NULL)
 {
   inputs<-list(...)
   inputs<-lapply(inputs,vert)

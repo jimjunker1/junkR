@@ -1,7 +1,7 @@
 Package: junkR
 Type: Package
 Title: Personal R functions of Jim Junker
-Version: 0.1.0
+Version: 0.2.0
 Author: Jim Junker
 Maintainer: Jim Junker <james.junker1@gmail.com>
 Description: This package contains generic functions used frequently by myself. This package is updated as functions are added, updated, or removed.
