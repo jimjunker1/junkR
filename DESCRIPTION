@@ -30,6 +30,7 @@ Collate:
     'convert_complete_author.R'
     'get_complete_coauthors.R'
     'rowr.R'
+    'geom_flat_violin.R'
 Suggests: 
     scholar,
     RefManageR
