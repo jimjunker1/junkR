@@ -1,0 +1,10 @@
+Name: Trackdown Download
+Description: This addin automatically downloads the Google Doc associated with the .Rmd in a trackdown workflow. The operations to follow must be laid out in the R script "download_trackdown.R".
+Binding: trackdown_download
+Interactive: false
+
+Name: Trackdown Upload
+Description: This addin automatically downloads the Google Doc associated with the .Rmd in a trackdown workflow. The operations to follow must be laid out in the R script "upload_trackdown.R".
+Binding: trackdown_upload
+Interactive: false
+

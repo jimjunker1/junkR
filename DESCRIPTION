@@ -2,35 +2,29 @@ Package: junkR
 Type: Package
 Title: Personal R functions of Jim Junker
 Version: 0.2.0
-Author: Jim Junker
-Maintainer: Jim Junker <james.junker1@gmail.com>
+Authors@R: person("Jim", "Junker", email = "james.junker1@gmail.com",
+  role = c("aut", "cre"))
 Description: This package contains generic functions used frequently by myself. This package is updated as functions are added, updated, or removed.
-License: MIT License
+License: MIT License + file LICENSE
+RoxygenNote: 7.2.3
 Encoding: UTF-8
 LazyData: true
 Depends: 
     R (>= 3.5.0),
     dplyr,
     purrr,
-    grid,
     ggplot2
 Imports:
+    grid,
     httr,
     rvest,
     xml2,
     methods,
-    RefManageR
-RoxygenNote: 7.1.1
-Collate: 
-    'stat-.R'
-    'GeomIsoline.R'
-    'named_group_split.R'
-    'standalone.R'
-    'author_exchange.R'
-    'convert_complete_author.R'
-    'get_complete_coauthors.R'
-    'rowr.R'
-    'geom_flat_violin.R'
+    RefManageR, 
+    rlang,
+    utils,
+    stringr
 Suggests: 
-    scholar,
-    RefManageR
+    scholar
+URL: https://jimjunker1.github.io/junkR/
+BugReports: 

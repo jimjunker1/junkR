@@ -1,8 +1,7 @@
 #' geom_isolineNP
 #' This geom adds NP stoichiometric isolines to plot background for NP pools
-#'
-library(ggplot2)
-GeomIsolineNP = ggproto("GeomIsoline", Geom,
+#' @import ggplot2
+GeomIsoline = ggproto("GeomIsoline", Geom,
                        required_aes = c("x","y"),
                        default_aes = aes(fill = 'red',  shape = 21, colour = "black", size = 2),
                        draw_panel = function(data, panel_scales, coord) {
@@ -119,7 +118,7 @@ geom_isoline <- function(mapping = NULL, data = NULL,
     data = data,
     mapping = mapping,
     stat = StatIdentity,
-    geom = GeomAbline,
+    geom = GeomIsoline,
     position = PositionIdentity,
     show.legend = show.legend,
     inherit.aes = FALSE,
@@ -130,55 +129,55 @@ geom_isoline <- function(mapping = NULL, data = NULL,
   )
 }
 
-#' @rdname ggplot2-ggproto
-#' @format NULL
-#' @usage NULL
-#' @export
-GeomAbline <- ggproto("GeomAbline", Geom,
-                      draw_panel = function(data, panel_params, coord) {
-                        ranges <- coord$backtransform_range(panel_params)
-
-                        data$x    <- ranges$x[1]
-                        data$xend <- ranges$x[2]
-                        data$y    <- ranges$x[1] * data$slope + data$intercept
-                        data$yend <- ranges$x[2] * data$slope + data$intercept
-
-                        GeomSegment$draw_panel(unique(data), panel_params, coord)
-                      },
-
-                      default_aes = aes(colour = "black", size = 0.5, linetype = 1, alpha = NA),
-                      required_aes = c("slope", "intercept"),
-
-                      draw_key = draw_key_abline
-)
-
-warn_overwritten_args <- function(fun_name, overwritten_arg, provided_args, plural_join = " and/or ") {
-  overwritten_arg_text <- paste0("`", overwritten_arg, "`")
-
-  n_provided_args <- length(provided_args)
-  if (n_provided_args == 1) {
-    provided_arg_text <- paste0("`", provided_args, "`")
-    verb <- "was"
-  } else if (n_provided_args == 2) {
-    provided_arg_text <- paste0("`", provided_args, "`", collapse = plural_join)
-    verb <- "were"
-  } else {
-    provided_arg_text <- paste0(
-      paste0("`", provided_args[-n_provided_args], "`", collapse = ", "),
-      ",", plural_join,
-      "`", provided_args[n_provided_args], "`"
-    )
-    verb <- "were"
-  }
-
-  warning(
-    sprintf(
-      "%s: Ignoring %s because %s %s provided.",
-      fun_name,
-      overwritten_arg_text,
-      provided_arg_text,
-      verb
-    ),
-    call. = FALSE
-  )
-}
+#' #' @rdname ggplot2-ggproto
+#' #' @format NULL
+#' #' @usage NULL
+#' #' @export
+#' GeomAbline <- ggproto("GeomAbline", Geom,
+#'                       draw_panel = function(data, panel_params, coord) {
+#'                         ranges <- coord$backtransform_range(panel_params)
+#'
+#'                         data$x    <- ranges$x[1]
+#'                         data$xend <- ranges$x[2]
+#'                         data$y    <- ranges$x[1] * data$slope + data$intercept
+#'                         data$yend <- ranges$x[2] * data$slope + data$intercept
+#'
+#'                         GeomSegment$draw_panel(unique(data), panel_params, coord)
+#'                       },
+#'
+#'                       default_aes = aes(colour = "black", size = 0.5, linetype = 1, alpha = NA),
+#'                       required_aes = c("slope", "intercept"),
+#'
+#'                       draw_key = draw_key_abline
+#' )
+#'
+#' warn_overwritten_args <- function(fun_name, overwritten_arg, provided_args, plural_join = " and/or ") {
+#'   overwritten_arg_text <- paste0("`", overwritten_arg, "`")
+#'
+#'   n_provided_args <- length(provided_args)
+#'   if (n_provided_args == 1) {
+#'     provided_arg_text <- paste0("`", provided_args, "`")
+#'     verb <- "was"
+#'   } else if (n_provided_args == 2) {
+#'     provided_arg_text <- paste0("`", provided_args, "`", collapse = plural_join)
+#'     verb <- "were"
+#'   } else {
+#'     provided_arg_text <- paste0(
+#'       paste0("`", provided_args[-n_provided_args], "`", collapse = ", "),
+#'       ",", plural_join,
+#'       "`", provided_args[n_provided_args], "`"
+#'     )
+#'     verb <- "were"
+#'   }
+#'
+#'   warning(
+#'     sprintf(
+#'       "%s: Ignoring %s because %s %s provided.",
+#'       fun_name,
+#'       overwritten_arg_text,
+#'       provided_arg_text,
+#'       verb
+#'     ),
+#'     call. = FALSE
+#'   )
+#' }

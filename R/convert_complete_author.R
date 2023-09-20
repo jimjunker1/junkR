@@ -3,8 +3,10 @@
 #' It can be used to import full author person objects into bib objects
 #' returned from RefManageR::ReadGS. This further compresses the full author
 #' names into just the first character for given and middle names.
-#' @param complete_coauthor_string A character string of the full author list
-#' separated by ,s of the form e.g., James Robert Junker, John Jacob Jingle Heimer-Schimdt, etc.
+#' @param complete_coauthor_string A character string of the full author list separated by ,s of the form e.g., James Robert Junker, John Jacob Jingle Heimer-Schimdt, etc.
+#' @importFrom stringr str_trim
+#' @import utils
+#' @export
 
 convert_complete_author <- function(complete_coauthor_string){
 

@@ -13,5 +13,5 @@ author_exchange <- function(x,y){
   requireNamespace('RefManageR', quietly = TRUE)
   x_flat <- unlist(x)
   x_flat$author <- y
-  return(RefManageR::RelistBibEntry(x_flat))
+  return(RelistBibEntry(x_flat))
 }

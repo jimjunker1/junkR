@@ -7,8 +7,7 @@
 convert_complete_author(complete_coauthor_string)
 }
 \arguments{
-\item{complete_coauthor_string}{A character string of the full author list
-separated by ,s of the form e.g., James Robert Junker, John Jacob Jingle Heimer-Schimdt, etc.}
+\item{complete_coauthor_string}{A character string of the full author list separated by ,s of the form e.g., James Robert Junker, John Jacob Jingle Heimer-Schimdt, etc.}
 }
 \description{
 It can be used to import full author person objects into bib objects
