@@ -1,3 +1,4 @@
+#' @title AllIdentical
 #' @description
 #' A faster way to determine if all objects in a list are identical
 #' @param ... a list of object of arbitrary length

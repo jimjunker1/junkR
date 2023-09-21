@@ -5,7 +5,9 @@
 #' @param x bib entry created from RefManageR::ReadGS() (i.e., list) with incomplete
 #' author list
 #' @param y personList created from convert_complete_author(). Same length as x
-#' @example mapply(author_exchange, x = jrj.bib, y = full_authors_list)
+#' @examples
+#' author_exchange()
+#' #mapply(author_exchange, x = jrj.bib, y = full_authors_list)
 #' @importFrom RefManageR RelistBibEntry
 #' @export
 #'

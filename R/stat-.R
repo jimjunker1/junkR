@@ -1,3 +1,0 @@
-#' stat-.R
-
-NULL

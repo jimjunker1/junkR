@@ -19,3 +19,7 @@ This function exchanges full author list formated with First and Middle initials
 and full family name. This allows the creation of bib entries with full author
 lists
 }
+\examples{
+author_exchange()
+#mapply(author_exchange, x = jrj.bib, y = full_authors_list)
+}

@@ -11,6 +11,7 @@
 ########## of your web
 
 
+#' @title create_xy
 #' @description
 #' This function is a support function for foodwebplot to create regularly spaced circular coordinates for the size of a given food web
 #' @param po the number of nodes in a food web passed from foodwebplot.R
@@ -36,6 +37,7 @@ create_xy <- function(po){
 # RETURNED VALUES:  The function creates a list with two values.  The first is
 # a ggplot2 object accessed as object$plot
 # The next is a dataframe of raw x-y coordinates to connect accessed as object$rawdat
+#' @title plot_webgg
 #' @description
 #' a plotting function for circular visualization of networks
 #' @param web a square S x S matrix of 0's and 1's where S is the total number of species in the web columns are consumers and rows are species that are consumed therefore a 1 in row 5 and column 8 means that species 8 eats species 5. Use the function \code{t()} if your matrices are oppositely arranged.
@@ -68,7 +70,7 @@ create_xy <- function(po){
 #'   r[which(niche==min(niche))] <- .00000001
 #'   for(i in 1:S){
 #'     for(j in 1:S){
-#'       if(niche[j] > (ci[i]-(.5*r[i])) && niche[j]< (ci[i]+.5*r[i]#' )){new.mat[j,i]<-1}
+#'       if(niche[j] > (ci[i]-(.5*r[i])) && niche[j]< (ci[i]+.5*r[i])){new.mat[j,i]<-1}
 #'     }
 #'   }
 #'   new.mat <- new.mat[,order(apply(new.mat,2,sum))]

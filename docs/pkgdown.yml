@@ -2,7 +2,7 @@ pandoc: 3.1.2
 pkgdown: 2.0.7
 pkgdown_sha: ~
 articles: {}
-last_built: 2023-09-20T21:19Z
+last_built: 2023-09-21T02:08Z
 urls:
   reference: https://jimjunker1.github.io/junkR/reference
   article: https://jimjunker1.github.io/junkR/articles
