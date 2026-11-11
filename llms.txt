@@ -1,0 +1,101 @@
+This package contains generic functions used frequently by myself. This
+package is updated as functions are added, updated, or removed.
+
+# Package index
+
+## All functions
+
+- [`AllIdentical()`](https://jimjunker1.github.io/junkR/reference/AllIdentical.md)
+  : AllIdentical
+
+- [`C_to_overkt()`](https://jimjunker1.github.io/junkR/reference/C_to_overkt.md)
+  : temperature conversion functions
+
+- [`C_to_overkt_stand()`](https://jimjunker1.github.io/junkR/reference/C_to_overkt_stand.md)
+  : C_to_overkt_stand
+
+- [`Mode()`](https://jimjunker1.github.io/junkR/reference/Mode.md) :
+  calculate the mode
+
+- [`as2()`](https://jimjunker1.github.io/junkR/reference/as2.md) :
+
+  A more robust form of the R `as` function.
+
+- [`author_exchange()`](https://jimjunker1.github.io/junkR/reference/author_exchange.md)
+  : This function exchanges full author list formated with First and
+  Middle initials and full family name. This allows the creation of bib
+  entries with full author lists
+
+- [`buffer()`](https://jimjunker1.github.io/junkR/reference/buffer.md) :
+  Pads an object to a desired length, either with replicates of itself
+  or another repeated object.
+
+- [`cbind_fill()`](https://jimjunker1.github.io/junkR/reference/cbind_fill.md)
+  : Combine arbitrary data types, filling in missing rows.
+
+- [`coalesce()`](https://jimjunker1.github.io/junkR/reference/coalesce.md)
+  :
+
+  A more versatile form of the T-SQL
+  [`coalesce()`](https://jimjunker1.github.io/junkR/reference/coalesce.md)
+  function.
+
+- [`convert_complete_author()`](https://jimjunker1.github.io/junkR/reference/convert_complete_author.md)
+  : This function converts full author lists to person objects.
+
+- [`count()`](https://jimjunker1.github.io/junkR/reference/count.md) :
+
+  A more versatile form of the T-SQL
+  [`count()`](https://jimjunker1.github.io/junkR/reference/count.md)
+  function.
+
+- [`create_xy()`](https://jimjunker1.github.io/junkR/reference/create_xy.md)
+  : create_xy
+
+- [`get_complete_coauthors()`](https://jimjunker1.github.io/junkR/reference/get_complete_coauthors.md)
+  : This function scrapes the full coauthor list for a publication from
+  Google Scholar. It is a modified version from the scholar package that
+  includes a sleep option to allow a time between http requests.
+
+- [`get_legend()`](https://jimjunker1.github.io/junkR/reference/get_legend.md)
+  : get_legend: get the legend from ggplot
+
+- [`` `%ni%` ``](https://jimjunker1.github.io/junkR/reference/grapes-ni-grapes.md)
+  : %ni%
+
+- [`insertRows()`](https://jimjunker1.github.io/junkR/reference/insertRows.md)
+  : Inserts a matrix into another matrix.
+
+- [`len()`](https://jimjunker1.github.io/junkR/reference/len.md) :
+  Allows finding the 'length' without knowledge of dimensionality.
+
+- [`named_group_split()`](https://jimjunker1.github.io/junkR/reference/named_group_split.md)
+  : named_group_split
+
+- [`overkt_to_C()`](https://jimjunker1.github.io/junkR/reference/overkt_to_C.md)
+  : absolute temperature conversion funciton
+
+- [`plot_webgg()`](https://jimjunker1.github.io/junkR/reference/plot_webgg.md)
+  : plot_webgg
+
+- [`rollApply()`](https://jimjunker1.github.io/junkR/reference/rollApply.md)
+  : Applies a function over a rolling window on any data object.
+
+- [`rowApply()`](https://jimjunker1.github.io/junkR/reference/rowApply.md)
+  : Applies a function row-wise on any data object.
+
+- [`rowr`](https://jimjunker1.github.io/junkR/reference/rowr.md) :
+  Row-Based Functions for R Objects
+
+- [`rows()`](https://jimjunker1.github.io/junkR/reference/rows.md) :
+  Allows row indexing without knowledge of dimensionality or class.
+
+- [`trackdown_download()`](https://jimjunker1.github.io/junkR/reference/trackdown_download.md)
+  : trackdown_download
+
+- [`trackdown_upload()`](https://jimjunker1.github.io/junkR/reference/trackdown_upload.md)
+  : trackdown_upload
+
+- [`vectorize()`](https://jimjunker1.github.io/junkR/reference/vectorize.md)
+  : Vectorize a scalar function to work on any R object.
+

@@ -1,0 +1,20 @@
+# Row-Based Functions for R Objects
+
+Provides utilities which interact with all R objects as if they were
+arranged in rows. It allows more consistent and predictable output to
+common functions, and generalizes a number of utility functions to to be
+failsafe with any number and type of input objects.
+
+## Details
+
+This version was pulled from deprecated package on 2021-01-04 to account
+for recent archival and code break following update to R 4.0.3
+
+Version: 1.1.3 Date: 2016-12-19 Author: Craig Varrichio
+\<canthony427@gmail.com\> Maintainer: Craig Varrichio
+\<canthony427@gmail.com\> Description: Provides utilities which interact
+with all R objects as if they were arranged in rows. It allows more
+consistent and predictable output to common functions, and generalizes a
+number of utility functions to to be failsafe with any number and type
+of input objects. Depends: R (\>= 3.0.1) Imports: methods License: GPL-3
+URL: https://github.com/cvarrichio/rowr

@@ -1,9 +1,8 @@
-pandoc: 2.19.2
-pkgdown: 2.0.7
+pandoc: 3.8.3
+pkgdown: 2.2.1
 pkgdown_sha: ~
 articles: {}
-last_built: 2023-09-21T02:12Z
+last_built: 2026-11-11T23:34Z
 urls:
   reference: https://jimjunker1.github.io/junkR/reference
   article: https://jimjunker1.github.io/junkR/articles
-
