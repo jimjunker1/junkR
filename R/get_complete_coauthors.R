@@ -10,10 +10,11 @@
 #' @importFrom httr set_config user_agent
 #' @importFrom xml2 read_html
 #' @importFrom rvest html_node html_text
+#' @importFrom magrittr `%>%`
 #' @export
 
 get_complete_coauthors <- function (id, pubid, sleep = 3,...){
-  httr::set_config(httr::user_agent(agent = "james.junker@montana.edu; +https://jimjunker.com"))
+  httr::set_config(httr::user_agent(agent = "james.junker@unt.edu; +https://jimjunker.com"))
   auths = ""
   url_template = "http://scholar.google.com/citations?view_op=view_citation&citation_for_view=%s:%s"
   url = sprintf(url_template, id, pubid)

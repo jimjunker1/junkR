@@ -6,13 +6,11 @@ Authors@R: person("Jim", "Junker", email = "james.junker1@gmail.com",
   role = c("aut", "cre"))
 Description: This package contains generic functions used frequently by myself. This package is updated as functions are added, updated, or removed.
 License: MIT License + file LICENSE
-RoxygenNote: 7.2.3
 Encoding: UTF-8
 LazyData: true
 Depends: 
     R (>= 3.5.0),
     dplyr,
-    purrr,
     ggplot2
 Imports:
     grid,
@@ -23,7 +21,9 @@ Imports:
     RefManageR, 
     rlang,
     utils,
-    stringr
+    stringr,
+    magrittr
 Suggests: 
     scholar
 URL: https://jimjunker1.github.io/junkR/
+Config/roxygen2/version: 8.1.1

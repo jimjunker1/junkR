@@ -8,31 +8,39 @@
 `%ni%` <- function(x, table) {!(x %in% table)}
 # '%ni%' <- Negate('%in%')
 
-mutate_cond <- function(.data, condition, ..., envir = parent.frame()) {
-  condition <- eval(substitute(condition), .data, envir)
-  .data[condition, ] <- .data[condition, ] %>% mutate(...)
-  .data
-}
-
+#' temperature conversion functions
+#' @description
+#' These functions convert among temperatures
+#' @param a temperature in degress celcius
 C_to_overkt <- function(a = NULL){1/(8.61733*10^-5*(a+273.15))}#overkt function
-overkt_to_C <- function(a = NULL){1/(a*(8.61733*10^-5)) - 273.15}
-C_to_overkt_stand15 <- function(a = NULL, mu = 15){(1/(8.61733e-5*(mu+273.15)) - (1/(8.61733e-5*(a+273.15))))}
 
-na.rm_mean <- function(...,na.rm=FALSE){mean(c(...),na.rm=na.rm)}
-
+#' absolute temperature conversion funciton
+#' @description
+#' Function to convert inverse absolute temperature to celcius
 #'
-#' @importFrom purrr map
-rmap <- function (.x, .f, ...) {
-  if(is.null(dim(.x))) stop("dim(X) must have a positive length")
-  .x <- t(.x) %>% as.data.frame(.,stringsAsFactors=F)
-  map(.x=x,.f=.f,...)
-}
+#' @param a temperature in inverse boltzmann temperature
+overkt_to_C <- function(a = NULL){1/(a*(8.61733*10^-5)) - 273.15}
 
+#' C_to_overkt_stand
+#' @description
+#' This functions converts to celcius to inverse Boltzmann temperature (1/kT) from a set standard, e.g., 15 C
+#' @param a This is the temperature in celcius
+#' @param mu This is the standardization temperature in celcius
+C_to_overkt_stand <- function(a = NULL, mu = 15){(1/(8.61733e-5*(mu+273.15)) - (1/(8.61733e-5*(a+273.15))))}
+
+#' calculate the mode
+#' @description
+#' This function calculates the model of a vector
+#' @param x vector to calculate the mode
 Mode <- function(x) {
   ux <- unique(x)
   ux[which.max(tabulate(match(x, ux)))]
 }
 
+#' get_legend: get the legend from ggplot
+#' @description
+#' This function extracts the legend from a ggplot for complex plotting layouts or exporting for presentations
+#' @param myggplot This is the ggplot object to extract the legend from
 get_legend<-function(myggplot){
   tmp <- ggplot_gtable(ggplot_build(myggplot))
   leg <- which(sapply(tmp$grobs, function(x) x$name) == "guide-box")
@@ -40,9 +48,6 @@ get_legend<-function(myggplot){
   return(legend)
 }
 
-makeNamedList <- function(...) {
-  structure(list(...), names = as.list(substitute(list(...)))[-1L])
-}
 
 theme_mod <- theme_bw() %+replace% theme(panel.grid = element_blank())
 theme_black <- function() {theme_bw() %+replace% theme(panel.background = element_rect(fill = 'transparent', colour = NA),panel.grid = element_blank(), axis.ticks = element_line(color = 'white'),

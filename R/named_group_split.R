@@ -4,6 +4,8 @@
 #' @param .tbl A tibble or tibble-convertable object
 #' @param ... further arguments, including the variable/s by which to group_split and set names
 #' @import rlang
+#' @importFrom dplyr group_keys group_split group_by
+#' @importFrom magrittr `%>%`
 #' @export
 #' @examples
 #' named_group_split()

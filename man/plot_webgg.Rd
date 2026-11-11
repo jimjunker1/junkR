@@ -9,7 +9,7 @@ plot_webgg(web, labels)
 \arguments{
 \item{web}{a square S x S matrix of 0's and 1's where S is the total number of species in the web columns are consumers and rows are species that are consumed therefore a 1 in row 5 and column 8 means that species 8 eats species 5. Use the function \code{t()} if your matrices are oppositely arranged.}
 
-\item{labels}{vector of length S containin string values for the color of each consumer}
+\item{labels}{vector of length S containing string values for the color of each consumer}
 }
 \value{
 list with two values. The first, `plot`, a ggplot2 object accessed by \code{object$plot}. The second,`rawdat`, a data frame of raw x-y coordinates to connect with lines accessed as \code{object$rawdat}

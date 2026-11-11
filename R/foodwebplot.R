@@ -41,7 +41,7 @@ create_xy <- function(po){
 #' @description
 #' a plotting function for circular visualization of networks
 #' @param web a square S x S matrix of 0's and 1's where S is the total number of species in the web columns are consumers and rows are species that are consumed therefore a 1 in row 5 and column 8 means that species 8 eats species 5. Use the function \code{t()} if your matrices are oppositely arranged.
-#' @param labels vector of length S containin string values for the color of each consumer
+#' @param labels vector of length S containing string values for the color of each consumer
 #' @returns list with two values. The first, `plot`, a ggplot2 object accessed by \code{object$plot}. The second,`rawdat`, a data frame of raw x-y coordinates to connect with lines accessed as \code{object$rawdat}
 #' @import ggplot2
 #' @examples
@@ -84,6 +84,7 @@ create_xy <- function(po){
 #' @export
 #'
 plot_webgg <- function(web,labels){
+  X1 <- X2 <- color <- opts <- NULL
   	xy <- create_xy(dim(web)[1])
 		xy <-data.frame(xy)
 		cons <- vector()
@@ -124,7 +125,7 @@ plot_webgg <- function(web,labels){
 
   }
       my.plot<-my.plot+geom_path(data=p.df,aes(x=X1,y=X2,group=color,colour=color))+scale_colour_manual(values=labels[label.in],legend=F)
-		my.plot <-   my.plot+opts(axis.ticks = theme_blank(), axis.title.y = theme_blank(), axis.text.y =  theme_blank(), axis.title.x = theme_blank(), axis.text.x =  theme_blank())
+		# my.plot <-   my.plot+opts(axis.ticks = theme_blank(), axis.title.y = theme_blank(), axis.text.y =  theme_blank(), axis.title.x = theme_blank(), axis.text.x =  theme_blank())
 	return(list(plot=my.plot,rawdat=p.df))
 }
 
